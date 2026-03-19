@@ -1,24 +1,24 @@
 {
-  "name": "api",
+  "name": "kitchen-api",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "Kitchen API with orders, health, and Prometheus /metrics",
+  "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "lint": "eslint .",
-    "test": "echo \"No tests yet\""
+    "test": "jest",
+    "lint": "eslint server.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
+  "engines": {
+    "node": ">=18"
+  },
   "dependencies": {
-    "cors": "^2.8.6",
-    "express": "^5.2.1"
+    "express": "^4.21.0",
+    "mongodb": "^6.21.0",
+    "prom-client": "^15.1.0"
   },
   "devDependencies": {
-    "@eslint/js": "^10.0.1",
-    "eslint": "^10.0.3",
-    "globals": "^17.4.0",
-    "jest": "^30.3.0"
+    "eslint": "^8.57.0",
+    "jest": "^29.7.0",
+    "supertest": "^7.0.0"
   }
 }
